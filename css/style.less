@@ -85,9 +85,10 @@ h4 {
   font-size: 2.6rem;
   line-height: 150%;
   color: @main-color-dark;
+  font-weight: 300;
 
   & span {
-    font-weight: 300;
+    font-weight: 100;
     }
   }
 
@@ -118,10 +119,10 @@ img {
   .color-box {
     display: inline-block;
     background-color: #F8F8F8;
-    width: 228px;
-    height: 228px;
+    width: 15rem;
+    height: 15rem;
     position: absolute;
-    left: -6%;
+    left: -10%;
     top: -30%;
     z-index: -1;
   }
@@ -682,6 +683,10 @@ button {
   }
 }
 
+.btn-inst {
+  margin-top: 0;
+  padding: 1.46rem 3.2rem 0.86rem 3.2rem;
+}
 
 /* === FOOTER ===*/
 
@@ -689,7 +694,7 @@ button {
   display: flex;
   flex-direction: column;
   background-color:@main-color-dark;
-  margin-top: 6rem;
+  margin-top: 10rem;
   justify-content: center;
   align-items: center;
   padding: 4rem 4rem 2rem;
@@ -941,20 +946,38 @@ input:active {
   }
 
 
+
+
 /* === MEDIA SCREEN ===*/
+
+@media screen and (max-width: 1280px) {
+  .category {
+    gap: 1rem;
+  }
+}
+
 
 @media screen and (max-width: 1024px) {
   body, html {
     font-size: 12px;
   }
 
-  /* .content {
+  .content {
     padding: 0 1rem;
-  } */
+  } 
 
-  .category {
-    gap: 0.5rem;
+  .about img,
+  .face-img {
+    max-width: 400px;
   }
+
+  .header ul {
+    flex-basis: 45%;
+  }
+}
+@media screen and (max-width: 720px) {
+ .logo-img {max-width:70%}
+ .btn__feedback {max-width: 100px;}
 }
  
 @media screen and (max-width: 768px) {
@@ -979,7 +1002,7 @@ input:active {
   }
 }
  
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 560px) {
   body, html {
     font-size: 8px;
   }
@@ -1017,8 +1040,12 @@ input:active {
   .hero-content__wrap{height: 100vh;}
   .hero-content__btn {
     position: absolute;
-    bottom:1.7rem;
+    bottom: 1.7rem;
     left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    max-width: 300px;
   }
   .hero__btn-container {
     display: none;
@@ -1187,7 +1214,7 @@ input:active {
     
     & img {
       height: 100vh;
-      width: auto;
+      width: 100%;
       object-fit: cover;
       object-position: 70% center;
     }
@@ -1207,11 +1234,15 @@ input:active {
   .about img, .face-img {
     width: 100%;
   }
-
+  .hover-list ul li {font-size: 2.2rem;}
+  .hover-list ul span {font-size: 1rem;}
+  .category-item__desc p,
+  p {font-size: 1.5rem;}
 }
 
 @media (min-width: 500px){
-  .only-mob {
+  .only-mob,
+  .link-more {
     display: none;
   }
      #menu__toggle {
@@ -1220,65 +1251,8 @@ input:active {
 
 }
 
-@media screen and (max-width: 375px){
-  body,html, p {
-    font-size: 16px;
-  }
-  .content-wrap {margin: 2rem auto 3.2rem;}
-  .content-wrap__descript {margin-top: 1.2rem;}
-  .content-wrap__descript h4 {
-    font-size: 1.3rem;
-    padding: 0 1.8rem 1.2rem;
-    font-weight: 300;
-  }
-  h4 span {font-weight: 100;}
-  .color-box {
-    height: 255px;
-    left: 0;
-    top: -14%;
-    width: 100%;
-  }
-  .btn__get-result {margin-top: 1.7rem;}
-  .about {margin-top: 3.1rem;}
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
-  }
-  .about {margin-bottom: 3.1rem}
-  .about-text {
-    margin-bottom: 0;
-  }
-  .about-text p {
-    display: none;
-  }
-  .hero-nav {
-    margin: 1.6rem 1rem;
-  }
-  .slider-text {
-    font-size: 2rem;
-  }
-  .hover-list {
-    max-height: 194px;
-  }
-  .hover-list:hover,
-  .hover-list:active{
-    max-height: 630px;
-  }
-  .hover-list ul li {
-    font-size: 1.3rem;
-  }
-  .category-item__desc {
-    bottom: 1.1rem;
-    left: 1.3rem;
-}
-  .category-item__list {padding:2.5rem 1rem;}
-  .category-item__desc h3 {
-      font-size: 2rem;
-  }
-  .category-item__desc p {
-      font-size: 1rem;
-  }
-
+@media screen and (max-width:480px){
+  
   .testimonials-wrap {
     grid-template-columns: 1fr; 
     grid-template-rows: 1fr 1fr 1fr; 
@@ -1340,7 +1314,7 @@ input:active {
   .big, .sm1, .sm2 {
     padding: 3.3rem 1.25rem;
   }
-  .instagram-title{margin: 6rem 1.25rem 2.5rem;}
+  
   .instagram-items {margin: 0 1.25rem;}
   .btn-inst {
     letter-spacing: 0.15em;
@@ -1348,7 +1322,43 @@ input:active {
     margin-top: 2.5rem;
     width: 90%;
   }
+  .instagram {margin-top: 6rem;}
+  .instagram-title {max-width: 400px;}
+}
 
+@media screen and (max-width: 420px){
+  body,html, p {
+    font-size: 16px;
+  }
+  .hover-list {
+    max-height: 194px;
+  }
+  .hover-list:hover,
+  .hover-list:active{
+    max-height: 630px;
+  }
+  .hover-list ul li {
+    font-size: 1.3rem;
+    line-height: 156.49%;
+  }
+  .category-item__desc {
+    bottom: 1.1rem;
+    left: 1.3rem;
+}
+  .category-item__list {padding:2.5rem 1rem;}
+  .category-item__desc h3 {
+      font-size: 1.3rem;
+  }
+  .category-item__desc p {
+      font-size: 1rem;
+  }
+  .about-text p {
+    display: none;
+  }
+  .instagram-title{
+
+    margin: 6rem 1.25rem 2.5rem;
+  }
   .footer{
     margin-top: 3.6rem;
     padding: 3.3rem 1.25rem 3.5rem;
@@ -1404,19 +1414,55 @@ input:active {
   .footer-contacts {
     margin-bottom: 0;
   }
+   .content-wrap {margin: 2rem auto 3.2rem;}
+  .content-wrap__descript {margin-top: 1.2rem;}
+  .content-wrap__descript h4 {
+    font-size: 1.3rem;
+    padding: 0 1.8rem 1.2rem;
+    font-weight: 300;
+  }
+  h4 span {font-weight: 100;}
+  .color-box {
+    height: 255px;
+    left: 0;
+    top: -14%;
+    width: 100%;
+  }
+  .btn__get-result {margin-top: 1.7rem;}
+  .about {margin-top: 3.1rem;}
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .about {margin-bottom: 3.1rem}
+  .about-text {
+    margin-bottom: 0;
+  }
+
+  .hero-nav {
+    margin: 1.6rem 1rem;
+  }
+  .slider-text {
+    font-size: 2rem;
+  }
   .face-img {z-index: -1;}
   h4 {
     z-index:1;
     position: relative;
-  }
-  }
-
-@media screen and (max-width: 320px) {
- 
-  
+  }  
   .footer-menu li {
     line-height: 3rem;
   }
+
+}
+
+@media screen and (max-width: 375px){
+
+ 
+}
+
+@media screen and (max-width: 320px) {
+ 
 
 
 
