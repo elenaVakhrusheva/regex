@@ -995,15 +995,15 @@ button {
   width: 4.6rem;
   height: 4.6rem;
   padding: 1.4rem 1.6rem;
-  background: url('/img/icons/arr-next.svg') #9db8ce no-repeat center;
+  background: url('../img/icons/arr-next.svg') #9db8ce no-repeat center;
 }
 /* line 911, style.less */
 .item-next {
-  background: url('/img/icons/arr-next.svg') #9db8ce no-repeat center;
+  background: url('../img/icons/arr-next.svg') #9db8ce no-repeat center;
 }
 /* line 915, style.less */
 .item-prev {
-  background: url('/img/icons/arr-next.svg') #9db8ce no-repeat center;
+  background: url('../img/icons/arr-next.svg') #9db8ce no-repeat center;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
