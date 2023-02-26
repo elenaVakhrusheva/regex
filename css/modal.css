@@ -60,9 +60,8 @@
 
 .modal__btn-close {
   float: right;
-  font-family: sans-serif;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 47px;
+  font-weight: 400;
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
@@ -85,13 +84,14 @@
   position: relative;
   flex: 1 1 auto;
   padding: 0 1.25rem 1.6rem;
-  overflow: auto;
-    font-family: 'Roboto';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
   line-height: 160%;
   color: #626262;
+  height: 400px;
+  overflow-y: auto;
 }
 
 

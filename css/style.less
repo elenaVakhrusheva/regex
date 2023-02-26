@@ -532,8 +532,7 @@ button {
 
 /* === section TESTIMONIALS === */
 
-.testimonials {
-  
+.testimonials { 
 
     &-title {
       text-align: center;
@@ -548,7 +547,8 @@ button {
         "big sm1 sm1"
         "big sm2 sm2"
         ". . ."; 
-      height: auto;
+      /* height: auto; */
+      height: 694px;
     }
 
     &__item {
@@ -567,6 +567,7 @@ button {
           line-height: 140%;
           text-align: center;
           color: @main-color-light;
+          max-width: 500px;
         }
 
         &-autor {
@@ -584,6 +585,7 @@ button {
     &-slider { 
       height: auto;
       max-width: 1470px;
+      width: 90%;
     } 
 
     &__btn-container {
@@ -592,16 +594,22 @@ button {
       z-index: 9;
     }
 }
-
+.big,.sm1,.sm2  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .big { 
-  grid-area: big; 
-  padding: 16.3rem 6rem;
+  grid-area: big;
+    /* padding: 16.3rem 6rem; */
+
 }
 
-.sm1,
+/* .sm1,
 .sm2 {
   padding: 6rem 10.5rem;
-}
+} */
 
 .sm1 {grid-area: sm1;}
 .sm2 {grid-area: sm2;}
@@ -1104,9 +1112,7 @@ input:active {
     text-align: center;
     text-transform: capitalize;
   }
-  .header ul {
-    flex-direction: column;
-  }
+  .header ul {flex-direction: column;}
   .logo-img {
     display: none;
     
@@ -1115,6 +1121,11 @@ input:active {
       z-index: 1;
       position: relative;
     }
+  }
+  .testimonials{
+    user-select: none;
+    
+    &-slider {width: 100%;}
   }
 
   .fz-content {
