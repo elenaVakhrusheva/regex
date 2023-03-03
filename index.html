@@ -487,23 +487,14 @@
 });
 </script>
 
- 
-<!--   <script src="script/fz-slider.js" defer></script> 
-  <script src="script/modal.js" defer></script>
-  -->
-
   <script>
-var js = document.createElement("script");
-js.src = "script/head.load.js"; // в кавычках ссылка на файл с headJS
-document.head.appendChild(js);
-js.onload = function() { 
-	head.load(['css/fz-slider.css','script/modal.js','script/fz-slider.js'])
-};
+    var js = document.createElement("script");
+    js.src = "script/head.load.js";  
+    document.head.appendChild(js);
+    js.onload = function() { 
+      head.load(['css/fz-slider.css','script/modal.js','script/fz-slider.js'])
+    };
 </script>
-
-<!-- <script href="script/head.load.js"></script>
-<script>
-	head.load(['css/fz-slider.css', 'script/modal.js','script/fz-slider.js'])
-</script> -->
+ 
 </body>
 </html>
