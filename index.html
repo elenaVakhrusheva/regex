@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="fonts/Arial.woff" type="font/woff2" crossorigin="anonymous" as="font">
   <link rel="stylesheet" href="fonts/TrajanPro3.woff" type="font/woff2"   crossorigin="anonymous" as="font">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/fz-slider.css"  rel="preload">
+  <link rel="stylesheet" href="css/fz-slider.css" >
   <link rel="stylesheet" href="css/modal.css"  >
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css"  rel="preload">
 </head>
 <body>
   <div class="wrapper">    
@@ -488,8 +488,22 @@
 </script>
 
  
-  <script src="script/fz-slider.js" defer></script> 
+<!--   <script src="script/fz-slider.js" defer></script> 
   <script src="script/modal.js" defer></script>
- 
+  -->
+
+  <script>
+var js = document.createElement("script");
+js.src = "script/head.load.js"; // в кавычках ссылка на файл с headJS
+document.head.appendChild(js);
+js.onload = function() { 
+	head.load(['css/fz-slider.css','script/modal.js','script/fz-slider.js'])
+};
+</script>
+
+<!-- <script href="script/head.load.js"></script>
+<script>
+	head.load(['css/fz-slider.css', 'script/modal.js','script/fz-slider.js'])
+</script> -->
 </body>
 </html>
