@@ -3,7 +3,7 @@
     src: url('../fonts/ArialMT.eot');
     src: url('../fonts/ArialMT.eot?#iefix') format('embedded-opentype'),
         url('../fonts/ArialMT.woff2') format('woff2'),
-        url('../fonts/ArialMT.woff') format('woff'),
+        url('../fonts/ArialMT.woff') format('font-woff'),
         url('../fonts/ArialMT.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -15,7 +15,7 @@
       src: url('../fonts/TrajanPro3-Regular.eot');
       src: url('../fonts/TrajanPro3-Regular.eot?#iefix') format('embedded-opentype'),
           url('../fonts/TrajanPro3-Regular.woff2') format('woff2'),
-          url('../fonts/TrajanPro3-Regular.woff') format('woff'),
+          url('../fonts/TrajanPro3-Regular.woff') format('font-woff'),
           url('../fonts/TrajanPro3-Regular.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
@@ -316,6 +316,7 @@ button {
   letter-spacing: 0.04em;
   color: #757575;
   cursor: pointer; 
+  text-decoration: none;
 
   &:hover {color: @color-hover;}
   &:active {color: @color-active;}
@@ -788,6 +789,7 @@ cite {font-style: normal;}
 
     & li a {
       color: @main-color-light; 
+      text-decoration: none;
 
       &:hover {
         color:#a9afb9;
