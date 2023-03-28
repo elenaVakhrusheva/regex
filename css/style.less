@@ -549,7 +549,7 @@ button {
     }
   
     &-wrap {  
-      display: grid; 
+      display: grid!important; 
       grid-template-columns: 1fr 1fr; 
       grid-template-rows: 1fr 1fr; 
       gap: 2rem; 
@@ -557,7 +557,7 @@ button {
         "big sm1 sm1"
         "big sm2 sm2"
         ". . .";  
-      height: 694px;
+      min-height: 694px;
     }
 
     &__item {
@@ -619,7 +619,7 @@ button {
 .sm2 {grid-area: sm2;}
 
 cite {font-style: normal;}
-
+blockquote, figcaption {display: block;}
 
 /* === section INSTAGRAM ===*/
 
@@ -943,18 +943,20 @@ input:active {
   .header ul {flex-basis: 45%;}
 }
 
-@media screen and (max-width: 720px) {
- .logo-img {max-width:70%}
- .btn__feedback {max-width: 100px;}
-}
- 
 @media screen and (max-width: 768px) {
   body, html {font-size: 10px;}
   .about img, .face-img {max-width: 300px;}
   .big {padding: 10rem 3rem;}
   .sm1, .sm2 {padding: 3rem 5rem;}
   .form-title {max-width: 100%;}
+  .testimonials-wrap {min-height:auto;}
 }
+
+@media screen and (max-width: 720px) {
+ .logo-img {max-width:70%}
+ .btn__feedback {max-width: 100px;}
+}
+ 
  
 @media screen and (max-width: 560px) {
   body, html {font-size: 8px;}
@@ -1153,9 +1155,11 @@ input:active {
       position: relative;
     }
   }
+
   .testimonials{
     user-select: none;
     touch-action: pan-y;
+    height:100%!important;
     
     &-slider {width: 100%;}
   }
@@ -1190,15 +1194,7 @@ input:active {
   p {font-size: 1.5rem;}
 }
 
-@media (min-width: 425px){
-  .only-mob,
-  .link-more {
-    display: none;
-  }
-     #menu__toggle {
-    opacity: 0;
-  }
-}
+
 
 @media screen and (max-width:480px){
   .testimonials-wrap {
@@ -1210,14 +1206,14 @@ input:active {
       "sm1"
       "sm2"; 
   }
-  .testimonials__item-quote{font-size: 1rem;}
+  .testimonials__item-quote{font-size: 1.5rem;}
   .testimonials__item-autor{
-	  font-size: 0.8rem;
+	  font-size: 1rem;
     margin-top: 1.25rem;
   }
   .testimonials-overlay:not(:first-child),
   .testimonials__btn-container {
-    display: none;
+    display: none!important;
     pointer-events: none;
     touch-action:none;
   } 
@@ -1421,5 +1417,17 @@ input:active {
 }
 
 
+@media (min-width: 425px){
+  .only-mob{
+    display: none;
+  }
+     #menu__toggle {
+    opacity: 0;
+  }
+}
 
-
+@media (min-width: 480px){
+  .link-more{
+    display: none;
+  }
+}
